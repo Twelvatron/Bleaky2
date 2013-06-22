@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "Shared/_Layout.cshtml";
+}
+<div ng-controller="loginController">
+    <div class="hero-unit">
+        <form class="form-horizontal" action="/Login" method="post">
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Email</label>
+                <div class="controls">
+                    <input ng-model="email" type="text" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">Password</label>
+                <div class="controls">
+                    <input ng-model="password" type="password" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="well">
+        {{userList}}
+    </div>
+    <a class="btn btn-primary" ng-click="register()" href="">Register Me</a>
+    <a class="btn btn-primary" ng-click="users()" href="">Get Users</a>
+</div>

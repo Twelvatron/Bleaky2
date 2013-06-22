@@ -1,0 +1,1 @@
+﻿var bleakyApp = angular.module('BleakyApp', []);
